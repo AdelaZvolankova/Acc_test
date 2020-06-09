@@ -3,17 +3,18 @@ Documentation   Washing machine test Mall.cz
 Library    SeleniumLibrary
 
 *** Variables ***
+${browser}  chrome
+${url}    http://www.mall.cz
+
 
 *** Test Cases ***
 User wants to buy 2 most expensive washing machines
     [Documentation]  Washing machine test Mall.cz
     [Tags]  Smoke
-    Open Browser  http://www.mall.cz    chrome
-    Sleep   3s
+    Open Browser  ${url}    ${browser}
     Maximize browser window
-    Sleep   3s
+    Title should be    MALL.CZ – bílé zboží, elektronika, PC, outdoor, hobby, hračky, kosmetika, chovatelské potřeby
     Input text  id=form-sitesearch-input  Pračka
-    Sleep   3s
     Click button    xpath=/html/body/div[2]/header/div/div[2]/div[3]/fieldset/div[1]/button
     Sleep    3s
     Click link    xpath=//*[@id="content"]/div[1]/div/div[1]/div[2]/div/div/ul/li[3]/a
