@@ -27,5 +27,3 @@ User wants to buy 2 most expensive washing machines
     Close Browser
 
 *** Keywords ***
-
-*** Test Cases ***
