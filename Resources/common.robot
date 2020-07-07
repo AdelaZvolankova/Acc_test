@@ -1,10 +1,9 @@
 *** Settings ***
 Documentation   Washing machine test Mall.cz
 Library    SeleniumLibrary
+Variables   ../Data/variables.py
 
 *** Variables ***
-${browser}  chrome
-${url}    http://www.mall.cz
 
 
 *** Keywords ***
