@@ -1,15 +1,11 @@
 *** Settings ***
 Documentation   Washing machine test Mall.cz
+Variables   ../Data/variables.py
 Resource    ../Resources/common.robot     #for Setup & Teardown
 Resource    ../Resources/mall.robot       #for lower level keywords in test cases
 Test Setup    Common.Begin web test
 Test Teardown    Common.End test
 
-*** Variables ***
-${browser}  chrome
-${url}    http://www.mall.cz
-${search_term}    Pračka
-${sleep_time}    3s
 
 *** Test Cases ***
 User can search for products
@@ -31,5 +27,6 @@ User can proceed to check out
     Mall.Select product
     Mall.Add product to cart
     Mall.Check the cart
+
 
 
