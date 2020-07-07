@@ -1,5 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
+Variables   ../Data/variables.py
 
 *** Keywords ***
 Load
