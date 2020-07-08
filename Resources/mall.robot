@@ -2,31 +2,29 @@
 Documentation   Washing machine test Mall.cz
 Library    SeleniumLibrary
 Resource    ../Resources/PO/LandingPage.robot
+Resource    ../Resources/PO/TopNav.robot
+Resource    ../Resources/PO/SearchResults.robot
+Resource    ../Resources/PO/Cart.robot
+
 
 *** Keywords ***
 
 Search for products
     LandingPage.Load
     LandingPage.Verify Page Loaded
-    Input text  id=form-sitesearch-input  ${search_term}
-    Click button    xpath=/html/body/div[2]/header/div/div[2]/div[3]/fieldset/div[1]/button
-    Sleep    ${sleep_time}
+    TopNav.Search for Products
 
 Sort products
-    Click link    xpath=//*[@id="content"]/div[1]/div/div[1]/div[2]/div/div/ul/li[3]/a
-    Sleep    ${sleep_time}
+    SearchResults.Sort Products
 
 Select product
-    Click link    xpath=/html/body/div[2]/div[2]/div[2]/main/section/div/article[1]/div/a
-    Sleep    ${sleep_time}
+    SearchResults.Click product link
 
 Add product to cart
-    Click button    xpath=/html/body/div[2]/div/div[2]/main/div/article/div[1]/section[2]/div[2]/div[4]/form/div/span/div/span/div/button
-    Sleep    ${sleep_time}
+    Cart.Add product to cart
 
 Check the cart
-    Click link    xpath=//*[@id="navigation-widget"]/ul/li[4]/div[1]/a[1]
-    Sleep    ${sleep_time}
+    Cart.Verify product added
 
 End test
     Close Browser
