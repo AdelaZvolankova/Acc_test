@@ -1,0 +1,12 @@
+browser = 'chrome'
+url = 'http://www.mall.cz'
+main_page_title = 'MALL.CZ – bílé zboží, elektronika, PC, outdoor, hobby, hračky, kosmetika, chovatelské potřeby'
+search_term = 'Pračka'
+sleep_time = '3s'
+search_box = 'id=form-sitesearch-input'
+search_button = 'xpath=//*[@id="mobile-search"]/fieldset/div[1]/button'
+sort_by_price_desc = 'xpath=//*[@id="content"]/div[1]/div/div[1]/div[2]/div/div/ul/li[3]/a'
+product_link = 'xpath=//*[@id="1364180"]'
+add_to_cart = 'xpath=//*[@id="content"]/div/article/div[1]/section[2]/div[3]/div[4]/form/div/span/div/span/div/button'
+view_cart = 'xpath=//*[@id="navigation-widget"]/ul/li[4]/div[1]/a[1]'
+
