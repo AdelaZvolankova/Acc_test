@@ -1,5 +1,5 @@
 for num in reversed (range(1,101)):
-  if num % 3 == 0 and num % 5 == 0:
+  if num % 15 == 0:
     print('Testing')
   elif num % 3 == 0 and num % 5 > 0:
     print('Software')
